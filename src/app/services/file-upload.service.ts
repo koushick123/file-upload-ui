@@ -6,7 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FileUploadService {
-  private baseUrl = 'http://localhost:8080/uploadapp/mediaupload';
+	
+  //private domain = 'www.my-file-upload.com';
+  private domain = 'localhost:8080';
+  private baseUrl = 'http://'+this.domain+'/uploadapp/mediaupload';
 
   constructor(private http: HttpClient) { }
 
